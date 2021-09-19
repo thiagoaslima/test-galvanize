@@ -4,6 +4,8 @@
   "description": "Product info database",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node src/index",
+    "build": "tsc",
     "test": "echo No tests defined!"
   },
   "author": "Galvanize",
