@@ -6,6 +6,7 @@
   "scripts": {
     "start": "ts-node src/index",
     "build": "tsc",
+    "docker:up": "docker-compose -f docker/docker-compose.yml --env-file .env up",
     "test": "jest --passWithNoTests"
   },
   "author": "Galvanize",
