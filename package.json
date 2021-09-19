@@ -10,7 +10,11 @@
   "author": "Galvanize",
   "license": "ISC",
   "devDependencies": {
-    "@types/lowdb": "^1.0.11"
+    "@types/lowdb": "^1.0.11",
+    "@types/node": "^16.9.3",
+    "@types/pg": "^8.6.1",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
   },
   "dependencies": {
     "fastify": "^3.19.2",
