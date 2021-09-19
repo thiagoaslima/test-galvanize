@@ -1,10 +1,11 @@
-import fastify from "fastify";
-import { productControllers } from "./controllers/productControllers";
+import { makeApp } from "./setup/app";
 
 const PORT = 3000;
 
-const server = fastify();
-server.register(productControllers);
+const server = makeApp({
+    logger: true
+});
+
 server.listen(PORT, err => {
     if (err) console.log(err);
     console.log(`Server listening on port ${PORT}`);
