@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Product info database",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo No tests defined!"
   },
   "author": "Galvanize",
   "license": "ISC",
   "devDependencies": {
+    "@tsconfig/node16": "^1.0.2",
     "@types/lowdb": "^1.0.11",
     "@types/node": "^16.9.3",
     "@types/pg": "^8.6.1",

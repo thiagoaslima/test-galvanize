@@ -1,5 +1,5 @@
 import fastify from "fastify";
-import { productControllers } from "./controllers/productControllers.js";
+import { productControllers } from "./controllers/productControllers";
 
 const PORT = 3000;
 
