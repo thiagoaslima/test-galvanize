@@ -1,0 +1,20 @@
+{
+  "name": "product-info",
+  "version": "1.0.0",
+  "description": "Product info database",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo No tests defined!"
+  },
+  "author": "Galvanize",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lowdb": "^1.0.11"
+  },
+  "dependencies": {
+    "fastify": "^3.19.2",
+    "node-fetch": "^2.6.1",
+    "pg": "^8.6.0"
+  }
+}
