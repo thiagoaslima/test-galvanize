@@ -1,7 +1,7 @@
-import { makeApp } from "./app";
+import { makeApp } from "../setup/app";
 
-describe('App', () => {
-  test('starts correctly', async () => {
+describe('Healthcheck route', () => {
+  test('returns ok status', async () => {
     const app = makeApp()
 
     const response = await app.inject({
