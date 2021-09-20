@@ -7,7 +7,7 @@ import { Product } from "../../domain/models/product";
 const fakeProvider = (example: Partial<Product>): LoadProduct => ({
   // Use type assertion as we only need partials for the tests
   load: (productId: number) => {
-    const response = example.id === productId ? example as Product : undefined
+    const response = example.id === productId ? example as Product : null
     
     return Promise.resolve(response);
   }

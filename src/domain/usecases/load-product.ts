@@ -3,7 +3,7 @@ import { NoContentResponse } from "../../controllers/types/http";
 import { Product } from "../models/product";
 
 export interface LoadProduct {
-  load: (productId: number) => Promise<Product | undefined>;
+  load: (productId: number) => Promise<Product | null>;
 }
 
 export declare namespace LoadProduct {

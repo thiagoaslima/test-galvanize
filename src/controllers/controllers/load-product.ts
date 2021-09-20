@@ -1,6 +1,6 @@
+import { HttpController } from "../types/http";
 import { noContent, successResponse } from "../helpers/http-response";
 import { LoadProduct } from "../../domain/usecases/load-product";
-import { HttpController } from "../types/http";
 
 export class LoadProductController implements HttpController<LoadProduct.Input, LoadProduct.Response> {
 

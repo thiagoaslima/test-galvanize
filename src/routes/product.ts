@@ -1,6 +1,5 @@
 import { FastifyInstance, FastifyRequest } from "fastify";
 import { makeLoadProductController } from "../controllers/factories/load-product";
-import { LoadProductController } from "../controllers/load-product/load-product";
 
 type ProductRequest = FastifyRequest<{
     Params: { productId: string };
