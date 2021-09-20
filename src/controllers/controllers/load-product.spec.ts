@@ -17,10 +17,10 @@ describe('LoadProductController', () => {
   test('should return 200 and the product with the same productId from the route', async () => {
     const product = { id: faker.datatype.number(), name: faker.commerce.productName() };
     const sut = new LoadProductController(fakeProvider(product));
-    const response = await sut.handle({productId: product.id});
+    const result = await sut.handle({productId: product.id});
     
-    expect(response.statusCode).toBe(200);
-    expect(response.data).toEqual(product);
+    expect(result.statusCode).toBe(200);
+    expect(result.response).toEqual(product);
   });
   
   test('should return 204 if no product with that id', async () => {
@@ -28,9 +28,9 @@ describe('LoadProductController', () => {
     const sut = new LoadProductController(fakeProvider(product));
 
     const request = { productId: 9999 };
-    const response = await sut.handle(request);
-    expect(response.statusCode).toBe(204);
-    expect(response.data).toMatchInlineSnapshot(`
+    const result = await sut.handle(request);
+    expect(result.statusCode).toBe(204);
+    expect(result.response).toMatchInlineSnapshot(`
 Object {
   "message": "No product with productId 9999 found",
 }

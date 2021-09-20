@@ -1,6 +1,6 @@
 export interface HttpResponse<T = any> {
   statusCode: number,
-  data: T
+  response: T
 }
 
 export type NoContentResponse = { message: string };

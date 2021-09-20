@@ -10,7 +10,7 @@ export class LoadProductController implements HttpController<LoadProduct.Input, 
         const product = await this.provider.load(request.productId);
 
         if (!product) {
-            return noContent(`No product with productId ${request.productId} found`);
+            return noContent(`No product found`);
         }
 
         return successResponse(product);

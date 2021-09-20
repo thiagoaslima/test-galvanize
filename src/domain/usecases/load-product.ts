@@ -7,10 +7,7 @@ export interface LoadProduct {
 }
 
 export declare namespace LoadProduct {
-  export type Input = {
-    productId: number; 
-    currency?: Currency;
-  }
+  export type Input = { productId: number; }
 
   export type Response = Product | NoContentResponse;
 }
