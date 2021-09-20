@@ -4,7 +4,7 @@ jest.mock("../controllers/factories/load-product", () => {
   return {
     makeLoadProductController: () => ({
       handle: () => {
-        return Promise.resolve({ statusCode: 200, data: { id: 1 } })
+        return Promise.resolve({ statusCode: 200, response: { id: 1 } })
       }
     })
   }

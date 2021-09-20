@@ -23,16 +23,16 @@ describe('LoadProductController', () => {
     expect(result.response).toEqual(product);
   });
   
-  test('should return 204 if no product with that id', async () => {
+  test('should return 200 if no product with that id', async () => {
     const product = { id: 1, name: faker.commerce.productName() };
     const sut = new LoadProductController(fakeProvider(product));
 
     const request = { productId: 9999 };
     const result = await sut.handle(request);
-    expect(result.statusCode).toBe(204);
+    expect(result.statusCode).toBe(200);
     expect(result.response).toMatchInlineSnapshot(`
 Object {
-  "message": "No product with productId 9999 found",
+  "message": "No product found",
 }
 `);
   });
