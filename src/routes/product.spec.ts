@@ -1,6 +1,16 @@
 import { makeApp } from "../setup/app";
 
-const app = makeApp()
+jest.mock("../controllers/factories/load-product", () => {
+  return {
+    makeLoadProductController: () => ({
+      handle: () => {
+        return Promise.resolve({ statusCode: 200, data: { id: 1 } })
+      }
+    })
+  }
+})
+
+const app = makeApp();
 
 describe('Product routes', () => {
 
@@ -13,9 +23,7 @@ describe('Product routes', () => {
       });
 
       expect(response.statusCode).toBe(200);
-      expect(response.json()).toEqual(expect.objectContaining({
-        id: 1
-      }));
+      expect(response.json()).toEqual({ id: 1 });
     });
 
   });
