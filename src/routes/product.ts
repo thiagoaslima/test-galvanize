@@ -1,15 +1,16 @@
 import { FastifyInstance, FastifyRequest } from "fastify";
-import { LoadProductController } from "../controllers/load-product";
+import { makeLoadProductController } from "../controllers/factories/load-product";
+import { LoadProductController } from "../controllers/load-product/load-product";
 
 type ProductRequest = FastifyRequest<{
     Params: { productId: string };
-  }>
+}>
 
 export const productRoutes = async (app: FastifyInstance) => {
     
-    app.get('/product/:productId', (req: ProductRequest, res) => {
-        const loadProductController = new LoadProductController();
-        const response = loadProductController.handle({
+    app.get('/product/:productId', async (req: ProductRequest, res) => {
+        const loadProductController = makeLoadProductController();
+        const response = await loadProductController.handle({
             productId: Number(req.params.productId)
         });
 
