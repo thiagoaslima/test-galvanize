@@ -4,7 +4,7 @@
 
 First start:
 
-- `yarn init:dev` (Sets up environment locally)
+- `yarn init:dev`
 
 to setup docker/postgres
 
@@ -17,7 +17,7 @@ To run the application with `ts-node`.
 
 ## Testing
 
-You cn run the example tests with:
+You can run the example tests with:
 
 - `yarn test`
 
