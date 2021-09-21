@@ -2,6 +2,8 @@
 
 ## Running Locally
 
+Create your `.env` file based on `.env.example`
+
 First start:
 
 - `yarn init:dev`
